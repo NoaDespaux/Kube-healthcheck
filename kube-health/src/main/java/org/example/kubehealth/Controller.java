@@ -12,7 +12,7 @@ public class Controller {
     @GetMapping("/health")
     public ResponseEntity<String> health() {
         RestTemplate restTemplate = new RestTemplate();
-        String helloServiceUrl = "http://localhost:8080/hello";
+        String helloServiceUrl = System.getenv().getOrDefault("HELLO_SERVICE_URL", "http://localhost:8080/hello");
         try {
             ResponseEntity<String> response = restTemplate.getForEntity(helloServiceUrl, String.class);
             if (response.getStatusCode() == HttpStatus.OK) {
