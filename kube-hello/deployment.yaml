@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kube-hello
-        image: noadespaux31/kube-hello:latest
+        image: noadespaux31/springhello:latest
         imagePullPolicy: Always  # For local development
         ports:
         - containerPort: 8080
