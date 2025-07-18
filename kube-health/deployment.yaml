@@ -42,7 +42,7 @@ spec:
           failureThreshold: 5
         readinessProbe:
           httpGet:
-            path: /health
+            path: /actuator/health
             port: 8181
           initialDelaySeconds: 30
           periodSeconds: 10
