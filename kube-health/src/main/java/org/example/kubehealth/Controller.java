@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class Controller {
 
-    @GetMapping("/actuator/health")
+    @GetMapping("/health")
     public ResponseEntity<String> health() {
         RestTemplate restTemplate = new RestTemplate();
         String helloServiceUrl = System.getenv().getOrDefault("HELLO_SERVICE_URL", "http://localhost:8080/hello");
@@ -23,6 +23,11 @@ public class Controller {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("DOWN");
         }
+    }
+
+    @GetMapping("/actuator/health")
+    public ResponseEntity<String> actuatorHealth() {
+        return health();
     }
 
 }
