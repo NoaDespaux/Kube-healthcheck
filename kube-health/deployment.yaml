@@ -64,4 +64,4 @@ spec:
     port: 8181
     targetPort: 8181
     protocol: TCP
-  type: ClusterIP
+  type: NodePort
