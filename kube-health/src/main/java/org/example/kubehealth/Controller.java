@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class Controller {
 
-    @GetMapping("/health")
+    @GetMapping("/actuator/health")
     public ResponseEntity<String> health() {
         RestTemplate restTemplate = new RestTemplate();
         String helloServiceUrl = System.getenv().getOrDefault("HELLO_SERVICE_URL", "http://localhost:8080/hello");
