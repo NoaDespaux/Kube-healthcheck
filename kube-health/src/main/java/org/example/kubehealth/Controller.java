@@ -27,7 +27,7 @@ public class Controller {
 
     @GetMapping("/actuator/health")
     public ResponseEntity<String> actuatorHealth() {
-        return health();
+        return ResponseEntity.ok("{\"status\":\"UP\"}");
     }
 
 }

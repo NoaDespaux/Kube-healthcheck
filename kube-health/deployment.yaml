@@ -23,7 +23,7 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: "kubernetes"
-        - name: KUBE_HELLO_SERVICE_URL
+        - name: HELLO_SERVICE_URL
           value: "http://kube-hello-service:8080/hello"
         resources:
           requests:
