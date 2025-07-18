@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: kube-health
-        image: kube-health:latest
-        imagePullPolicy: Never  # For local development
+        image: noadespaux31/kube-health:latest
+        imagePullPolicy: Always  # For local development
         ports:
         - containerPort: 8181
         env:
